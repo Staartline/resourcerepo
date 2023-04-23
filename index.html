@@ -61,7 +61,6 @@
 			display:block;
 			height:200px;
 
-			
 		}
 		.musicbana{
 			display:block;
@@ -71,12 +70,13 @@
 		}		
 		.col{
 			background-color:#F8EDE3;
-			color:7D6E83;
+			color:#7D6E83;
 
-			min-width:250px;
-			max-width:300px;
+			width: 250px;
 			height:350px;
 			overflow-y:scroll;
+
+			padding-top:10px;
 
 			text-align: center;
 			border: 2px double;
@@ -103,12 +103,29 @@
 
 		.columns{
 			display:flex;
+			flex-direction: row;
 			gap:20px;
 
 			height:400px;
 			justify-content: center;
 			align-content:center;
+
 		}
+
+		@media (max-width: 600px) {
+			.col{
+				width: 175px;
+				height: 300px;
+			}
+			.columns{
+
+				height:800px;
+				flex-wrap:wrap;
+				flex-direction:column;
+
+			}
+		}
+	}
 	</style>
 </head>
 <body>
